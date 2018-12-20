@@ -3,7 +3,8 @@
 # live-screenshots
 
 create screenshots that are always up to date. No maintenance required.  
-The image above is actually already a live screenshot. The URL used to grab that screenshot is https://livescreenshots.com/sh/?query=%23screenshot-node&perfect=true&url=https%3A%2F%2Flivescreenshots.com
+
+The image you see above is actually already a live screenshot. The URL used to grab that screenshot is https://livescreenshots.com/sh/?query=%23screenshot-node&perfect=true&url=https%3A%2F%2Flivescreenshots.com
 
 You can create your own live screenshots with the handy online editor on https://livescreenshots.com/
 
