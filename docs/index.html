@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Live Screenshots PNG</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+
+  <nav class="sidebar">
+    <ul>
+      <li>
+        <a href="#welcome">Welcome</a>
+      </li>
+      <li>
+        <a href="#create">📸 Create</a>
+      </li>
+      <li>
+        <a href="#why">Why</a>
+      </li>
+      <li>
+        <a href="#how">How</a>
+      </li>
+    </ul>
+  </nav>
+
+  <div class="container">
+
+    <!-- ASCII Logo -->
+    <div class="logo">
+      <blockquote class="logo__inner" style="text-align: left;">
+        <pre><small style="font-family: Courier New, Courier, mono, sans-serif; font-size: 1.6em; text-align: left; font-weight: bold;">
++-+-+-+-+              
+|L|i|v|e|              
++-+-+-+-+-+-+-+-+-+-+-+
+|S|c|r|e|e|n|s|h|o|t|s|
++-+-+-+-+-+-+-+-+-+-+-+
+        </small></pre>
+      </blockquote>
+    </div>
+
+    <section class="section welcome" id="welcome">
+      <h2 class="bold h1">
+        Live Screenshots
+      </h2>
+      <p>
+        Create screenshots that update themselves automatically in seconds.
+      </p>
+    </section>
+    <section class="section create" id="create">
+      <h2 class="bold h1">
+        Create a live screenshot:
+      </h2>
+      <p>
+        <form id="my-example-form">
+          <div class="mb">
+            <label for="url" class="mbs label dib">
+              Url of the Website on which you want to take the screenshot (it has to be publicly available).<br>
+              Try for example entering this website as URL.<br>
+            </label>
+            <input class="input" type="text" name="url" id="url" value="https://livescreenshots.com/">
+          </div>
+          <div class="mb">
+            <label for="query" class="mbs label dib">
+              A <strong>query</strong> for the html element you want to screenshot.<br>
+              We use the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelector">querySelector()</a>
+              to get those elements so you can conveniently use <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Selectors">CSS
+                Selectors</a>.<br>
+              Try for example entering this website as URL and <em>#my-example-form</em> as query.<br>
+            </label>
+            <input class="input" name="query" type="text" id="query" value="#my-example-form">
+          </div>
+          <div class="mb">
+            <input class="input checkbox" name="perfect" type="checkbox" id="perfect" checked="checked">
+            <label for="perfect" class="mbs label">
+              Whether or not to exclude padding/margin pollution (recommended)
+            </label>
+          </div>
+          <div class="mb">
+            <input class="input input__button" type="submit" value="📸 Take Screenshot">
+          </div>
+        </form>
+      </p>
+      <p>
+        Output:
+        <div class="mb">
+          <img alt="output" id="output">
+        </div>
+        <div class="mb">
+          <a id="output-url"></a>
+          <input type="button" value="copy url" id="output-copy">
+        </div>
+      </p>
+    </section>
+    <section class="section why" id="why">
+      <h2 class="bold h1">
+        Why?
+      </h2>
+      <p>
+        Did you ever have to write the documentation for an application you’ve made?<br>
+        Naturally you’ll tend to not include explanatory screenshots of that application because that means, every time
+        you make a UI change, you’ll have to update all your screenshots which is tedious work.<br>
+        Well that is exactly why I’ve build Live Screenshots. You’ll never have to update your screenshots ever again
+        manually. It’s setup in literally seconds and requires not effort. Not even programming knowledge.<br>
+      </p>
+    </section>
+    <section class="section how" id="how">
+      <h2 class="bold h1">
+        How?
+      </h2>
+      <p>
+        Every time the image is requested (for example when a user loads your website), we’ll automatically launch a
+        webbrowser, navigate to the URL, take a screenshot and send that screenshot back to your request.
+      </p>
+    </section>
+
+  </div>
+
+  <script src="index.js"></script>
+</body>
+
+</html>
