@@ -23,3 +23,5 @@ If you want, you can run the tool on your own system. This is how to do it:
 - Run `PORT=80 npm run production` (change the port to whatever port you need)
 
 Now you should be able to access the app.
+
+[![Typewriter Gif](https://thibaultjanbeyer.github.io/DragSelect/typewriter.gif)](http://thibaultjanbeyer.com/)
