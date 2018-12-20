@@ -25,4 +25,6 @@ If you want, you can run the tool on your own system. This is how to do it:
 
 Now you should be able to access the app.
 
+# Have Fun!
+
 [![Typewriter Gif](https://thibaultjanbeyer.github.io/DragSelect/typewriter.gif)](http://thibaultjanbeyer.com/)
