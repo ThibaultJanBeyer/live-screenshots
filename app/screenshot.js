@@ -8,33 +8,27 @@ function start(data) {
     const page = await browser.newPage();
     await page.goto(data.url);
 
-    let screen;
-    if (data.query) {
-      const element = await findElement(data.query);
+    const element = await findElement(data.query);
 
-      const perfectX = element.rect.x + element.rect.width - element.realWidth;
-      const perfectY = element.rect.y + element.rect.height - element.realHeight;
+    const perfectX = element.rect.x + element.rect.width - element.realWidth;
+    const perfectY = element.rect.y + element.rect.height - element.realHeight;
 
-      screen = await page.screenshot({
-        clip: {
-          x: data.perfect ? perfectX : element.rect.x,
-          y: data.perfect ? perfectY : element.rect.y,
-          width: data.perfect ? element.realWidth : element.rect.width,
-          height: data.perfect ? element.realHeight : element.rect.height
-        },
-        encoding: "base64"
-      });
-    } else {
-      screen = await page.screenshot({
-        encoding: "base64"
-      });
-    }
+    let screen = await page.screenshot({
+      clip: {
+        x: data.perfect ? perfectX : element.rect.x,
+        y: data.perfect ? perfectY : element.rect.y,
+        width: data.perfect ? element.realWidth : element.rect.width,
+        height: data.perfect ? element.realHeight : element.rect.height
+      },
+      encoding: "base64"
+    });
 
     process.send(screen);
 
     await browser.close();
 
-    async function findElement(query) {
+    async function findElement(_query) {
+      const query = _query || 'body';
       let element = await page.$(query);
       if (!element) throw {
         message: `no element found for query ${query}`
