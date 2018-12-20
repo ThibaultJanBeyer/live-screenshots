@@ -2,17 +2,21 @@
 
 # live-screenshots
 
-create screenshots that are always up to date. No maintenance required.  
+create screenshots that are always up to date. No maintenance required.
 
 The image you see above is actually already a live screenshot. The URL used to grab that screenshot is https://livescreenshots.com/sh/?query=%23screenshot-node&perfect=true&url=https%3A%2F%2Flivescreenshots.com
 
 You can create your own live screenshots with the handy online editor on https://livescreenshots.com/
 
-If you find the tool useful, as Servercosts are high, please consider to [donate 1$](https://paypal.me/kleinanzeigen3) (or any amount you want). Thank you!
+If you find the tool useful, as Servercosts are high, please consider to [donate 1\$](https://paypal.me/kleinanzeigen3) (or any amount you want). Thank you!
 
 # Generate a Live Screenshot ready to use
 
 ### https://livescreenshots.com/
+
+# How does it work?
+
+Read it here: https://livescreenshots.com/#how
 
 # Host it on your own server
 
