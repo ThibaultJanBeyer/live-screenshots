@@ -4,7 +4,7 @@ create screenshots that are always up to date. No maintenance required.
 
 # Generate a Live Screenshot ready to use
 
-{{@todo: add url}}
+https://livescreenshots.com/
 
 # Host it on your own server
 
