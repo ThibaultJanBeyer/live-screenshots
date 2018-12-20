@@ -24,8 +24,7 @@ app.get('/sh', (req, res) => {
 
   // send the image gotten from puppeteer
   child.on('message', rsp => {
-    if (rsp.error)
-      return res.status(404).send(rsp.message);
+    if (rsp.error) res.status(404);
 
     const img = new Buffer.from(rsp, 'base64');
 

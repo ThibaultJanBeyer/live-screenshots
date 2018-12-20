@@ -1,4 +1,5 @@
 const puppeteer = require('puppeteer');
+const text2png = require('text2png');
 
 function start(data) {
   (async () => {
@@ -49,8 +50,7 @@ function start(data) {
   })()
   .catch(e => {
       console.log("BIG E", e)
-      e.error = true;
-      process.send(e);
+      process.send(text2png(e.message).toString('base64'));
     })
     .finally(e => console.log("outer final error", e));
 }

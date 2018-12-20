@@ -5,7 +5,7 @@
   const urlNode = document.querySelector('#url');
   urlNode.value = location.origin;
   const queryNode = document.querySelector('#query');
-  queryNode.value = '#my-example-form';
+  queryNode.value = '#screenshot-node';
   const perfectNode = document.querySelector('#perfect');
   const outputNode = document.querySelector('#output');
   const outputUrlNode = document.querySelector('#output-url');
