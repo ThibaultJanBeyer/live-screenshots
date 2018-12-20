@@ -2,11 +2,11 @@
 
 create screenshots that are always up to date. No maintenance required.
 
-# Examples and creation
+# Generate a Live Screenshot ready to use
 
 {{@todo: add url}}
 
-# Run it yourself
+# Host it on your own server
 
 If you want, you can run the tool on your own system. This is how to do it:
 
