@@ -19,7 +19,8 @@ app.get('/sh', (req, res) => {
   child.send({
     url: params.get('url'),
     query: params.get('query'),
-    perfect: params.get('perfect'),
+    perfect: JSON.parse(params.get('perfect')),
+    viewport: JSON.parse(params.get('viewport')),
   });
 
   // send the image gotten from puppeteer

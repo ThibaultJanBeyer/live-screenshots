@@ -3,18 +3,26 @@ const text2png = require('text2png');
 
 function start(data) {
   (async () => {
-    console.log(data);
+    console.log('data', data);
+
+    // Open it
     const browser = await puppeteer.launch({
       args: ['--no-sandbox', '--disable-setuid-sandbox']
     });
     const page = await browser.newPage();
     await page.goto(data.url);
 
+    // Browser size
+    if (data.viewport)
+      await page.setViewport(data.viewport);
+
+    // Find element
     const element = await findElement(data.query);
 
     const perfectX = element.rect.x + element.rect.width - element.realWidth;
     const perfectY = element.rect.y + element.rect.height - element.realHeight;
 
+    // Take screenshot
     let screen = await page.screenshot({
       clip: {
         x: data.perfect ? perfectX : element.rect.x,

@@ -167,9 +167,10 @@ h6 {
 }
 
 .input.checkbox {
-  width: 50px;
+  width: auto;
   float: left;
-  height: 30px;
+  height: auto;
+  margin: 5px 10px 0 0;
 }
 
 .input,
@@ -220,14 +221,9 @@ h6 {
 }
 
 .input__button::before {
-  content: url(save.svg);
   display: inline-block;
   width: 20px;
   height: 20px;
-}
-
-.input__button.saved::before {
-  content: url(edit.svg)
 }
 
 summary {

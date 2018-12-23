@@ -63,14 +63,14 @@
         <form id="my-example-form">
           <div class="mb">
             <label for="url" class="mbs label dib">
-              Url of the Website on which you want to take the screenshot (it has to be publicly available).<br>
+              <strong>Url</strong> (required) of the Website on which you want to take the screenshot (it has to be publicly available).<br>
               Try for example entering this website as URL.<br>
             </label>
             <input class="input" type="text" name="url" id="url" value="https://livescreenshots.com/">
           </div>
           <div class="mb">
             <label for="query" class="mbs label dib">
-              A <strong>query</strong> for the html element you want to screenshot.<br>
+              A <strong>query</strong> (optional) for the html element you want to screenshot.<br>
               We use the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelector">querySelector()</a>
               to get those elements so you can conveniently use <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Selectors">CSS
                 Selectors</a>.<br>
@@ -78,6 +78,13 @@
               Try for example entering this website as URL and <em>#my-example-form</em> as query.<br>
             </label>
             <input class="input" name="query" type="text" id="query" value="#my-example-form">
+          </div>
+          <div class="mb">
+            <label for="viewport" class="mbs label dib">
+              In some specific cases, it can be useful to set the <strong>viewport</strong> (optional) of the browser that takes the screenshot.<br>
+              Read about <a href="https://github.com/GoogleChrome/puppeteer/blob/v1.11.0/docs/api.md#pagesetviewportviewport">puppeteer viewport settings</a>.
+            </label>
+            <input class="input" name="viewport" type="text" id="viewport" value="{ width: 350, height: 500, isMobile: true }">
           </div>
           <div class="mb">
             <input class="input checkbox" name="perfect" type="checkbox" id="perfect" checked="checked">

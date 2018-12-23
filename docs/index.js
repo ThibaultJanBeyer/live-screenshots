@@ -6,6 +6,7 @@
   urlNode.value = location.origin;
   const queryNode = document.querySelector('#query');
   queryNode.value = '#screenshot-node';
+  const vpNode = document.querySelector('#viewport');
   const perfectNode = document.querySelector('#perfect');
   const outputNode = document.querySelector('#output');
   const outputUrlNode = document.querySelector('#output-url');
@@ -21,9 +22,22 @@
   function handleSubmit() {
     const url = encodeURIComponent(urlNode.value);
     const query = encodeURIComponent(queryNode.value);
+    let viewport = vpNode.value ? new Function(`return (${vpNode.value})`)() : '';
+    viewport = JSON.stringify(viewport);
+    viewport = encodeURIComponent(viewport);
     const perfect = perfectNode.checked;
 
-    const outputUrl = `${location.origin}/sh/?query=${query}&perfect=${perfect}&url=${url}`;
+    const outputUrl = `${
+      location.origin
+    }/sh/?query=${
+      query
+    }&perfect=${
+      perfect
+    }&url=${
+      url
+    }&viewport=${
+      viewport
+    }`;
 
     outputNode.alt = 'loading…';
     outputNode.classList.add('loading');
