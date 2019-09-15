@@ -11,4 +11,4 @@ COPY . ./
 
 EXPOSE 8080
 
-CMD [ "npm", "run", "production" ]
+CMD [ "npm", "start" ]
