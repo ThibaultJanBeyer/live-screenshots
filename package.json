@@ -1,7 +1,7 @@
 {
   "name": "live-screenshots",
   "short": "ls",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "create screenshots that are always up to date. No maintenance required",
   "main": "app/index.js",
   "scripts": {
