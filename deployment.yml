@@ -1,0 +1,45 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: live-screenshots
+  labels:
+    app: live-screenshots
+spec:
+  type: NodePort
+  ports:
+  - port: 8080 # access within the cluster
+    protocol: TCP
+    nodePort: 30010 # expose outside the cluster and range from 30000 to 32767
+    targetPort: 8080 # should match to the container port
+  selector:
+    app: live-screenshots
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: live-screenshots
+spec:
+  selector:
+    matchLabels:
+      app: live-screenshots
+  replicas: 1
+  minReadySeconds: 30
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxUnavailable: 1
+      maxSurge: 1
+  template:
+    metadata:
+      labels:
+        app: live-screenshots
+        version: 1.0.0
+    spec:
+      containers:
+      - name: live-screenshots
+        image: docker.coding.casa/ls/live-screenshots:1.0.0
+        ports:
+        - containerPort: 8080
+      imagePullSecrets:
+        - name: regcred
+---

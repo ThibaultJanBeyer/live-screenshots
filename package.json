@@ -1,9 +1,12 @@
 {
   "name": "live-screenshot",
+  "short": "ls",
   "version": "1.0.0",
   "description": "create screenshots that are always up to date. No maintenance required",
   "main": "app/index.js",
   "scripts": {
+    "make": "docker build . -f ./dockerfile -t docker.coding.casa/ls/live-screenshots",
+    "deploy": "./secrets/build.sh",
     "start": "nodemon app/index.js",
     "production": "pm2 start app/index.js -i max",
     "stop": "pm2 stop all; pm2 delete all"
