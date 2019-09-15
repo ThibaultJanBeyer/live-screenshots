@@ -1,4 +1,4 @@
-![Example](https://livescreenshots.com/sh/?query=%23screenshot-node&perfect=true&url=https%3A%2F%2Flivescreenshots.com&what=foo)
+[![Example](https://livescreenshots.com/sh/?query=%23screenshot-node&perfect=true&url=https%3A%2F%2Flivescreenshots.com)](https://livescreenshots.com/sh/?query=%23screenshot-node&perfect=true&url=https%3A%2F%2Flivescreenshots.com)
 
 # live-screenshots
 
