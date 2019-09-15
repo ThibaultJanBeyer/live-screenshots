@@ -7,10 +7,10 @@ metadata:
 spec:
   type: NodePort
   ports:
-  - port: 8080 # access within the cluster
+  - port: 3000 # access within the cluster
     protocol: TCP
     nodePort: 30010 # expose outside the cluster and range from 30000 to 32767
-    targetPort: 8080 # should match to the container port
+    targetPort: 3000 # should match to the container port
   selector:
     app: live-screenshots
 ---
