@@ -1,0 +1,16 @@
+{
+  "name": "lambda",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "publish": "zip -r lambda.zip . && aws lambda update-function-code --function-name livescreenshots --zip-file fileb://lambda.zip"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chrome-aws-lambda": "^1.20.3",
+    "puppeteer-core": "^1.20.0"
+  }
+}
