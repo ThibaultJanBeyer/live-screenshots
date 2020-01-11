@@ -1,8 +1,22 @@
 const screenshot = require('./src/screenshot')
 
-exports.handler = async (event, context, callback) => {
+const returnObj = {
+  statusCode: 200,
+  headers: {
+    "Access-Control-Allow-Origin": "*",
+    "Content-Type": "image/png"
+  },
+  isBase64Encoded: true
+}
+
+exports.handler = async (event) => {
   const params = event.queryStringParameters || {}
   const { url, query, perfect, viewport } = params
+
+  if (!url) return {
+    statusCode: 200,
+    body: JSON.stringify(params),
+  }
 
   try {
     const image = await screenshot({
@@ -11,24 +25,19 @@ exports.handler = async (event, context, callback) => {
       perfect: perfect && JSON.parse(perfect),
       viewport: viewport && JSON.parse(viewport),
     })
-    callback({
-      statusCode: 200,
-      headers: {
-        "Access-Control-Allow-Origin": "*",
-        "Content-Type": "image/png"
-      },
+    return {
+      ...returnObj,
       body: image,
-      isBase64Encoded: true
-    })
+    }
   } catch (e) {
     console.log("MESSAGE!!", e.errorMessage || e.message || e);
-    callback({
-      statusCode: 400,
+    return {
+      ...returnObj,
       headers: {
-        "Access-Control-Allow-Origin": "*",
-        "Content-Type": "text"
+        ...returnObj.headers,
+        "Content-Type": "text/plain"
       },
-      body: JSON.stringify(e)
-    })
+      body: JSON.stringify(e),
+    }
   }
 };

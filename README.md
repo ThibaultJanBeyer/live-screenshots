@@ -33,7 +33,3 @@ Now you should be able to access the app.
 # Have Fun!
 
 [![Typewriter Gif](https://thibaultjanbeyer.github.io/DragSelect/typewriter.gif)](http://thibaultjanbeyer.com/)
-
-# @todo
-
-- use redis for caching to save loads
