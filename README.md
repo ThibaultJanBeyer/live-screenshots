@@ -1,3 +1,9 @@
+# Shut down!
+
+Unfortunately this project is on-hold since the server costs were becoming far too expensive to carry. With 0 revenue and only costs I decided to stop the project for now. Thanks anyways to whomever gave it a try. Given I find a solutions or sponsor this can be revived.
+
+---
+
 [![Example](https://livescreenshots.com/sh/?query=%23screenshot-node&perfect=true&url=https%3A%2F%2Flivescreenshots.com&foo=bar)](https://livescreenshots.com/sh/?query=%23screenshot-node&perfect=true&url=https%3A%2F%2Flivescreenshots.com)
 
 # live-screenshots
